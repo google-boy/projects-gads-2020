@@ -23,16 +23,15 @@
         gcloud config set compute/zone us-central1-b
 
     Create a vm, my-vm-2 in this new zone:
-        gcloud compute instances create "my-vm-2" --machine-type "n1-standard-1" --image-project "debian-cloud" 
-        --image "debian-9-stretch-v20190213" --subnet "default"
+        gcloud compute instances create "my-vm-2" --machine-type "n1-standard-1" --image-project "debian-cloud" --image "debian-9-stretch-v20190213" --subnet "default" 
 
 # Connect between the two instances
-    ssh my-vm-2
+    gcloud compute ssh my-vm-2
     ping c -3 my-vm-1
 
     result:- ping reveals the full hostname of my-vm-1, and 0% packet loss
 
-    ssh my-vm-1
+    gcloud compute ssh my-vm-1
 
 ### Instal nginx web server on my-vm-1:
     sudo apt-get install nginx-light -y

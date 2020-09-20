@@ -67,7 +67,7 @@ List deployed app engine services:
 ## Task 3 Deploy and run Hello World on App Engine
 
 Navigate to the source directory
-    cd ~/python-docs-samples/appengine/standard_python3/hell_world
+    cd ~/python-docs-samples/appengine/standard_python3/hello_world
 
 Deploy your Hello World application
     gcloud app deploy
@@ -80,7 +80,7 @@ Launch the browser to view the app
 
 ## Task 4 Disable the application
 Delete the deployed service:
-    gcloud app services delete SERVICES
+    gcloud app services delete default version=1.0
 
     this deletes all the deployed services
     Refreshing the browser window of the application site gives a 404 error
